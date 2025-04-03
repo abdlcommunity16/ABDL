@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDL Community Registration Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>ABDL Community Registration Agency</h1>
+        </div>
+        <div class="customer-service">
+            <p>Need help? message us at <strong>abdlcommunity696@gmail.com</strong></p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Welcome Section with Diaper Image Background -->
+        <section class="welcome">
+            <h2>Welcome to the ABDL Community Registration Agency</h2>
+            <p>    committed to excellence
+                Welcome to abdl community registration Agency. our main goal is to always achieve a high level of costomer satisfaction with the services and products that we provide. this simple approach has effectively fueled our growth.
+                We Are thrilled you've decided to visit us- 
+                please browse our site to discover what we're all about.
+            </p>
+        </section>
+
+        <!-- About the Agency Section -->
+        <section class="about-agency">
+            <h2>About the Agency</h2>
+            <p>How We Got Here
+
+
+                Since being established since 2010, Abdl community has been known for an unparalleled commitment to customer satisfaction.Its the standard of excellence that has provided the impetus for us to grow into the business we are today.
+                FOR MORE INFO ABOUT THE SERVICE WE RENDER, REACH OUT TODAY.
+
+            </p>
+        </section>
+
+        <!-- Diaper Gallery -->
+        <section class="diaper-gallery">
+            <h2>Our Diaper Collection</h2>
+            <div class="gallery">
+                <img src="Assets/antar.jpeg" alt="Diaper 1" class="diaper-img">
+                <img src="Assets/antar2.jpeg" alt="Diaper 2" class="diaper-img">
+                <img src="Assets/antar3.jpeg" alt="Diaper 3" class="diaper-img">
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="registration-form">
+            <h2>Register Now</h2>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="profile-picture">Upload Your Diaper Image</label>
+                    <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="previewImage(event)">
+                    <div id="image-preview" style="margin-top: 10px;"></div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required placeholder="Enter your address">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter your subject">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Payment Methods</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+    
+        /* Set the color of the heading and payment method options to black */
+        h2, .payment-option {
+          color: black; /* Set the color of the text to black */
+        }
+    
+        .payment-option {
+          padding: 10px;
+          margin: 10px;
+          border: 1px solid #ddd;
+          cursor: pointer;
+        }
+    
+        .payment-option:hover {
+          background-color: #f0f0f0;
+        }
+    
+        .wallet-info {
+          font-size: 1.1em;
+          margin-top: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>Select Your Payment Method</h2>
+    
+      
+      <div class="payment-option" onclick="selectPayment('apple-pay')">Apple Pay</div>
+      <div class="payment-option" onclick="selectPayment('cash-app')">Cash App</div>
+      <div class="payment-option" onclick="selectPayment('paypal')">PayPal</div>
+      <div class="payment-option" onclick="selectPayment('zelle')">Zelle</div>
+      <div class="payment-option" onclick="selectPayment('shine')">chine</div>
+    
+      <div id="payment-info" style="margin-top: 20px;"></div>
+    
+      <script>
+        function selectPayment(paymentMethod) {
+          let info = '';
+    
+          switch(paymentMethod) {
+
+            case 'apple-pay':
+              info = '<h3>Apple Pay</h3><p>ASK PAYMENT ENQUIRY THROUGH MAIL.</p>';
+              break;
+            case 'cash-app':
+              info = '<h3>Cash App</h3><p>Send payment to Cash App using your account or scan the QR code below:</p>';
+              info += '<div class="wallet-info">ASK PAYMENT ENQUIRY THROUGH MAIL:abdlcommunity@gmail.com <strong></strong></div>';
+              break;
+            case 'paypal':
+              info = '<h3>PayPal</h3><p>Click the button below to pay using PayPal, PAYMENT ENQUIRY USING MAIL.</p><button onclick="payWithPayPal()">Pay with PayPal</button>';
+              break;
+            case 'zelle':
+              info = '<h3>Zelle</h3><p>Send payment to the provided Zelle email or phone number:</p>';
+              info += '<div class="wallet-info">ASK PAYMENT ENQUIRY USING MAIL <strong>your_</strong></div>';
+              break;
+            case 'chine':
+              info = '<h3>chine</h3><p>chine payment option is integrated for certain users.</p>';
+              break;
+            default:
+              info = '<h3>ASK PAYMENT ENQUIRY USING MAIL</h3>';
+          }
+    
+          document.getElementById('payment-info').innerHTML = info;
+        }
+    
+        function payWithPayPal() {
+          // Integration for PayPal can go here (redirect to PayPal or use their API)
+          alert('Redirecting to PayPal...');
+          window.location.href = "https://www.paypal.com";
+        }
+        
+      </script>
+    </body>
+    </html>
+    <footer>
+        <p>ALL PAYMENT SHOULD GO THROUGH EMAIL:
+            abdlcommunity696@gmail.com  
+        </p>
+    </footer>
+    <footer>
+        <p>© 2025 ABDL Community Registration Agency. All rights reserved. lisensed by governmernt.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
